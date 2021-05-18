@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y apt-transport-https autoconf tzdata ope
     libjpeg62-turbo-dev \
     libpng-dev \
     libssl-dev \
-    libzip-dev \
-    unzip
+    libzip-dev
+    # unzip
 
 RUN docker-php-ext-configure intl --enable-intl \
     && docker-php-ext-install -j$(nproc) iconv mysqli pdo pdo_mysql curl bcmath mbstring json xml opcache intl soap \
