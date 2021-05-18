@@ -13,7 +13,7 @@ RUN apt-get update
 RUN export DEBIAN_FRONTEND=noninteractive && ACCEPT_EULA=Y apt-get install -y msodbcsql17 mssql-tools
 RUN ln -fsv /opt/mssql-tools/bin/* /usr/bin
 
-RUN apt-get update && apt-get install -y autoconf tzdata openntpd file g++ git gcc binutils libc-dev musl-dev make re2c libstdc++ coreutils libmcrypt-dev libpng-dev libxml2-dev libcurl4-openssl-dev curl \
+RUN apt-get update && apt-get install -y apt-transport-https autoconf tzdata openntpd file g++ git gcc binutils libc-dev musl-dev make re2c libstdc++ coreutils libmcrypt-dev libpng-dev libxml2-dev libcurl4-openssl-dev curl \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libpng-dev \
